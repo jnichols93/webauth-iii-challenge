@@ -85,7 +85,7 @@ function validatePassword(req, res, next) {
 }
 
 function validateToken(req, res, next) {
-    if (!req.headers || !req.headers.authorization) {
+    if (!req.headers.authorization) {
         return res.status(400).json({message: 'Missing authorization header'})
     }
 
